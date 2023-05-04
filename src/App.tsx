@@ -1,6 +1,5 @@
 import {Form, Button} from 'react-bootstrap';
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Configuration} from "openai";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,8 +18,8 @@ function App() {
   const [getTopic, setTopic] = useState('')
   const [getResponse, setResponse] = useState('')
 
-  const getPrompt = (topic: any, am_q: any, qm_a: any) => {
-    let prompt= 'Udělej quiz na téma ${topic} na ${am_q} otázek a napiš před otázku pak k tomu ${am_a} možné odpovědi a jaká je správná odpověď';
+  const getPrompt = (topic: any, am_q: any, am_a: any) => {
+    let prompt= `Udělej quiz na téma ${topic} na ${am_q} otázek a napiš před otázku pak k tomu ${am_a} možné odpovědi a jaká je správná odpověď`;
     return prompt;
   }
 
